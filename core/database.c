@@ -55,7 +55,7 @@ void create_player_data(u64snowflake user_id)
     PQclear(player_query);
 
     player_query = SQL_query(player_query,
-        "insert into public.player values(%ld, 0, 0, 0, 0, %ld, 0, 0, 4, 0, 0); \n"
+        "insert into public.player values(%ld, 0, 0, 0, %ld, 0, 0, 4, 0, 0); \n"
         "insert into public.biome_story values(%ld, 0, 0, 0, 0, 0)",
         user_id, discord_timestamp(client), user_id, user_id);
   }
